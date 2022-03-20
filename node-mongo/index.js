@@ -1,13 +1,10 @@
 const MongoClient = require('mongodb').MongoClient
-const assert = require('assert')
 const dboper = require('./operations')
 
 const url = 'mongodb://localhost:27017/'
 const dbname = 'conFusion'
 
-MongoClient.connect(url).then((client, err) => {
-
-    assert.equal(err, null)
+MongoClient.connect(url).then((client) => {
 
     console.log('Connected correctly to the server')
 
